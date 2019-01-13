@@ -1,3 +1,23 @@
 .topic{
     margin: 0px 5px 10px;
 }
+.tvscreen{
+
+}
+#gif-container{
+    position: absolute;
+    z-index: 100;
+    max-width: 60%;
+    left: 8%;
+    top: 5%;
+}
+#buttons{
+    background-color: #4D4D4D;
+    border: 5px black solid;
+    margin-left: 0px;
+}
+.topic{
+    background-color: orange;
+    color: white;
+    border: 2px white solid;
+}
