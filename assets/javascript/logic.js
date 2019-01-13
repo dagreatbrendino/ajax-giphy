@@ -37,7 +37,7 @@ $(document).ready(function(){
             }
 
             for (var j = 0; j < gifs.length; j++) {
-                $("#gif-container > div").append("<div class='col-6 col-md-6'><img class=img-fluid src=https://media.giphy.com/media/" + gifs[j] + "/giphy.gif />");
+                $("#gif-container > div").append("<div class='col-6 col-md-3'><img class=img-fluid src=https://media.giphy.com/media/" + gifs[j] + "/giphy.gif />");
             }
         });
     }
@@ -46,5 +46,13 @@ $(document).ready(function(){
         var query = $(this).attr("data-query");
         query.replace(" ","+");
         getGifs(query);
-    })
+    });
+    $(document).on("click","#addChar",function(event){
+        event.preventDefault();
+        if($("#newChar").val() != ""){
+            topics.push($("#newChar").val());
+        }
+        populateButtons(topics);
+        $("#newChar").val("");
+    });
 });
