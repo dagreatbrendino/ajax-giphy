@@ -51,6 +51,12 @@
     border-color: rgb(255, 153, 0);
     color: rgb(255, 153, 0);
 }
+.tv-turner{
+    position: absolute;
+    left: 0;
+    max-width: 50%;
+    margin-left: 25%;
+}
 @media screen and (max-width: 992px){
     .rating{
         margin-left: 0%;

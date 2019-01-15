@@ -10,6 +10,7 @@
     crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/jQueryRotate.js"></script>
     <script src="assets/javascript/logic.js"></script>
 </head>
 <body>
@@ -33,9 +34,15 @@
                                     </div>
                                 </div>
                                 <div class="tv-dials col-3">
-                                    <img class="img-fluid tv-dial" src="assets/images/dial.png" alt="dial">
-                                    <img class="img-fluid tv-dial" src="assets/images/dial.png" alt="dial">
-
+                                    <div style="position: relative">
+                                        <h6 style="text-align: center">Next Channel</h6>
+                                        <img class="img-fluid tv-dial" src="assets/images/dial-back.png" alt="dial">
+                                        <img class="img-fluid tv-turner" src="assets/images/dial-turner.png" alt="dial" data-deg='0'>
+                                    </div>
+                                    <div style="position: relative">
+                                            <img class="img-fluid tv-dial" src="assets/images/dial-back.png" alt="dial">
+                                            <img class="img-fluid tv-turner" src="assets/images/dial-turner.png" alt="dial" data-deg='0'>
+                                        </div>
                                     <div>
                                         <h6>Add a video game character!</h6>
                                         <form>
