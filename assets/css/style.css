@@ -1,9 +1,6 @@
 .topic{
     margin: 0px 5px 10px;
 }
-.tvscreen{
-
-}
 #gif-container{
     z-index: 100;
 }
@@ -73,6 +70,6 @@
 @media screen and (max-width: 576px){
     .rating{
         font-size: .6rem;
-        margin-left: 20%
+        margin-left: 20%;
     }
 }

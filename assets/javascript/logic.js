@@ -87,22 +87,31 @@ $(document).ready(function(){
             $(this).attr("src",$(this).attr("data-still"));
         }
     });
+    //function that will change the gifs to the next button over when the top dial is clicked
     $(document).on("click",".tv-turner", function(event){
+        //assign the index of the currently active topic
         var topicIndex = topics.indexOf(current);
+        //if it is the last item in the topics array
         if(topicIndex === (topics.length - 1)){
             topicIndex =0;
         }
         else{
             topicIndex ++;
         }
+        //find the current rotation of the invoking dial and rotate it 45 degrees
         var degrees = parseInt($(this).attr("data-deg"));
         degrees += 45;
         $(this).rotate({animateTo: degrees});
         $(this).attr("data-deg",degrees);
+        //change the current current topic to the specefied item in the topics array
         current = topics[topicIndex];
+        //make the string readable for the api
         current.replace(" ","+");
+        //focus the button associated with that topic
         $("#" + topicIndex).focus();
+        //get the gifs related to that topic
         getGifs(current);
+        //change current back to original string
         current = topics[topicIndex];
     });
 });
