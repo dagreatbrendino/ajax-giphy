@@ -5,19 +5,41 @@
 
 }
 #gif-container{
-    position: absolute;
     z-index: 100;
-    max-width: 60%;
-    left: 8%;
-    top: 5%;
 }
 #buttons{
-    background-color: #4D4D4D;
+    background-color: rgb(131, 63, 24);
     border: 5px black solid;
-    margin-left: 0px;
+    /* margin-left: 0px; */
 }
 .topic{
-    background-color: orange;
-    color: white;
+    background-color: hsl(13,100%,62%);
+    color: hsl(234,16%,37%);
     border: 2px white solid;
+}
+.tv-whole{
+    /* height: ; */
+    position: absolute;
+    background-color: rgb(131, 63, 24);
+    width: 100%;
+    z-index: 5;
+    height: 800px;
+}
+.tvscreen1{
+    width: 74%;
+    background-color: rgb(14, 13, 13);
+    height: 98vh;
+    z-index: 10;
+    /* bottom: -29%; */
+    margin-top: 3%;
+    left: 6%;
+}
+.tv-dials {
+    z-index: 200;
+    left: 6%;
+    margin-top: 5%;
+}
+.tv-dial{
+    margin-left: 25%;
+    max-width: 50%;
 }

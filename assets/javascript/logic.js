@@ -32,12 +32,14 @@ $(document).ready(function(){
             method: "GET"
         }).then(function (response) {
             //
+            console.log(response);
             for (var i = 0; i < 10; i++) {
-                gifs.push(response.data[i].id);
+                gifs.push([response.data[i].images.original_still.url,response.data[i].images.original.url]);
             }
 
             for (var j = 0; j < gifs.length; j++) {
-                $("#gif-container > div").append("<div class='col-6 col-md-3'><img class=img-fluid src=https://media.giphy.com/media/" + gifs[j] + "/giphy.gif />");
+                $("#gif-container > div").append("<div class='col-6 col-sm-3'><img class='img-fluid aGif' src=" + gifs[j][0] +
+                " data-index='"+ j + "' data-still='" + gifs[j][0] + "' data-anim='" + gifs[j][1] + "' />");
             }
         });
     }
@@ -55,4 +57,14 @@ $(document).ready(function(){
         populateButtons(topics);
         $("#newChar").val("");
     });
+    $(document).on("click",".aGif", function(event){
+        if($(this).attr("src") === $(this).attr("data-still")){
+            $(this).attr("src",$(this).attr("data-anim"));
+            console.log("true");
+        }
+        else{
+            $(this).attr("src",$(this).attr("data-still"));
+        }
+        console.log("image clicked");
+    })
 });
