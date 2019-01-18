@@ -24,12 +24,13 @@
 }
 .tvscreen1{
     width: 74%;
-    background-color: rgb(14, 13, 13);
+    background-color: rgb(179,180,182);
     min-height: 700px;
     z-index: 10;
     /* bottom: -29%; */
     margin-top: 3%;
     left: 6%;
+    border-radius: 25px;
 }
 .tv-dials {
     z-index: 200;
@@ -53,6 +54,10 @@
     left: 0;
     max-width: 50%;
     margin-left: 25%;
+}
+.panel{
+    background-color: black;
+    border: 5px white solid;
 }
 @media screen and (max-width: 992px){
     .rating{
