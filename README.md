@@ -67,3 +67,5 @@ data[i] = {
 ```
 ### jQueryRotate
 The jQueryRotate.js library is used to make the dial animate a certain degree of rotation every time the user clicks on the dial. It makes the animation consistent and is very easy to impliment. 
+### CSS/Bootstrap
+This project utilizes the Bootstrap grid layout to make responsive display of the content a breeze! 
